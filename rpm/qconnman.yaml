@@ -1,14 +1,12 @@
 Name:           qconnman
 Summary:        Qt wrapper for ConnMan
-Version:        1.21.0
+Version:        1.9.0
 Release:        1
 Group:          System/Libraries
 License:        LGPL-2.1+
 URL:            https://bitbucket.org/devonit/qconnman
 Sources:
     - "%{name}-%{version}.tar.xz"
-Patches:
-    - fix-deprecated-qdbus.patch
 SetupOptions: -q -n %{name}-%{version}/upstream
 Description: Qt wrapper for ConnMan.
 PkgBR:
