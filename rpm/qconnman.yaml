@@ -1,0 +1,39 @@
+Name:           qconnman
+Summary:        Qt wrapper for ConnMan
+Version:        1.21.0
+Release:        1
+Group:          System/Libraries
+License:        LGPL-2.1+
+URL:            https://bitbucket.org/devonit/qconnman
+Sources:
+    - "%{name}-%{version}.tar.xz"
+SetupOptions: -q -n %{name}-%{version}/upstream
+Description: Qt wrapper for ConnMan.
+PkgBR:
+    - fdupes
+    - gcc-c++
+    - dbus
+    - connman
+PkgConfigBR:
+    - Qt5Core
+    - Qt5Gui
+    - Qt5Network
+    - Qt5DBus
+Configure: none
+Builder: qmake5
+Files:
+    - "%doc AUTHORS README"
+    - "%{_libdir}/*.so.*"
+
+SubPackages:
+    - Name: devel
+      Summary: Development files for qconnman
+      Group: Development/Libraries
+      Description: |
+        This package contains the files necessary to develop applications |
+        using qconnman.
+      Files:
+         - "%{_includedir}/*"
+         - "%{_libdir}/*.so"
+         - "%{_libdir}/pkgconfig/*.pc"
+ 
