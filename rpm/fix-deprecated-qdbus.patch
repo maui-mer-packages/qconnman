@@ -1,0 +1,26 @@
+From 93fffa9ebcb517c341c5745ecf2cb7a4e91cd5b7 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sat, 3 May 2014 10:01:37 +0000
+Subject: [PATCH] Fix deprecated qdbus
+
+---
+ src/src.pro | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/src.pro b/src/src.pro
+index 10f0c4e..eff1844 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -8,7 +8,8 @@ TARGET = qconnman
+ DESTDIR = ../lib
+ DEPENDPATH += .
+ INCLUDEPATH += .
+-CONFIG += qdbus $${QCONNMAN_LIBRARY_TYPE}
++CONFIG += $${QCONNMAN_LIBRARY_TYPE}
++QT += dbus
+ VERSION = $${QCONNMAN_VERSION}
+ 
+ # Input
+-- 
+1.8.3-rc3
+

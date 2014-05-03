@@ -7,6 +7,8 @@ License:        LGPL-2.1+
 URL:            https://bitbucket.org/devonit/qconnman
 Sources:
     - "%{name}-%{version}.tar.xz"
+Patches:
+    - fix-deprecated-qdbus.patch
 SetupOptions: -q -n %{name}-%{version}/upstream
 Description: Qt wrapper for ConnMan.
 PkgBR:

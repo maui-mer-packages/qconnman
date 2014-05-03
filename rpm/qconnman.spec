@@ -16,6 +16,7 @@ License:    LGPL-2.1+
 URL:        https://bitbucket.org/devonit/qconnman
 Source0:    %{name}-%{version}.tar.xz
 Source100:  qconnman.yaml
+Patch0:     fix-deprecated-qdbus.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(Qt5Core)
@@ -42,6 +43,8 @@ using qconnman.
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
+# fix-deprecated-qdbus.patch
+%patch0 -p1
 # >> setup
 # << setup
 
