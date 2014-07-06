@@ -47,6 +47,11 @@ using qconnman.
 
 %build
 # >> build pre
+cat > qconnman.pro <<EOF
+TEMPLATE = subdirs
+CONFIG += ordered
+SUBDIRS += src
+EOF
 # << build pre
 
 %qmake5 
